@@ -1,17 +1,26 @@
+import java.util.HashMap;
+
 class Solution {
     public int[] twoSum(int[] nums, int target) {
-        // store the target - v=num alng with index
-
-        HashMap<Integer,Integer> hash = new HashMap<>(nums.length);
-
-        for(int i = 0 ; i < nums.length; i++){
-            int n = nums[i];
-            if(hash.containsKey(n)){
-                return new int[]{i,hash.get(n)};
+        HashMap<Integer, Integer> hash = new HashMap<>();
+        
+        for (int i = 0; i < nums.length; i++) {
+            int complement = target - nums[i];
+            
+            // Check if the complement exists in the map
+            if (hash.containsKey(complement)) {
+                return new int[]{hash.get(complement), i}; // Return indices
             }
-            hash.put(target-n,i);
+            
+            // Store the current number and its index
+            hash.put(nums[i], i);
         }
         
-        return new int[]{};
+        // In case there is no solution, return an empty array
+        return new int[] {};
     }
 }
+/**
+    Time Complexity: O(N) - for loop
+    Space Complexity: O(N) - hashmap
+ */
