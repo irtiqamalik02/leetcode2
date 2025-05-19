@@ -17,7 +17,6 @@ class Solution {
             }
             String key = sb.toString();
 
-        
             // add to hashmap initialisng a new list if required
             hash.putIfAbsent(sb.toString(),new ArrayList<>());
             hash.get(sb.toString()).add(str);
@@ -31,9 +30,9 @@ class Solution {
 }
 
 /** 
-    Time Complexity: O(N * K log K) where,
+    Time Complexity: O(N * K) where,
      N = number of strings ,
-     K = max length of a string (due to sorting)
+     K = max length of a string
 
-    Space Complexity: O(N*K)
+    Space Complexity: O(N * K)
 */
