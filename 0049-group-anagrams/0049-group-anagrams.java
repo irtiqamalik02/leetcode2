@@ -1,8 +1,7 @@
 class Solution {
     public List<List<String>> groupAnagrams(String[] strs) {
-        // use sorted as key and collect
 
-        List<List<String>> res = new ArrayList<>();
+        // use sorted as key and collect
         HashMap<String,List<String>> hash = new HashMap<>();
 
         for(String str : strs){
@@ -21,7 +20,10 @@ class Solution {
 
         // group all anagrams gogether
 
-        res.addAll(hash.values());
-        return res;
+        return new ArrayList<>(hash.values());
+
     }
 }
+
+// # Time : O(m*n*26);
+// # Space : O(n);
