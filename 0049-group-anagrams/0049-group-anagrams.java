@@ -25,5 +25,10 @@ class Solution {
     }
 }
 
-// # Time : O(m*n*26);
-// # Space : O(n);
+/** 
+    Time Complexity: O(N * K log K) where,
+     N = number of strings ,
+     K = max length of a string (due to sorting)
+
+    Space Complexity: O(N*K)
+*/
