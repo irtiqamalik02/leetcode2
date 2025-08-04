@@ -3,19 +3,14 @@ class Solution:
         if len(s) != len(t):
             return False
 
-        charCount = {}
+        charFreqMap = {}
 
-        for n in s:
-            charCount[n] = charCount.get(n,0)+1
-        
-        for n in t:
-            charCount[n] = charCount.get(n,0)-1
+        for i in range(len(s)):
+            charFreqMap[s[i]] =  charFreqMap.get(s[i],0)+1
+            charFreqMap[t[i]] =  charFreqMap.get(t[i],0)-1
 
-        for val in charCount.values():
+        for val in charFreqMap.values():
             if val != 0:
-                return False    
+                return False
 
-        return True          
-        
-
-     # sort and compare n log n   
+        return True            
