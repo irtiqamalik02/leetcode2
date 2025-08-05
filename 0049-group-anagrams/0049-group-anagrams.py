@@ -6,13 +6,4 @@ class Solution:
             key = tuple(sorted(s))
             anagramMap.setdefault(key,[]).append(s)
 
-        result = []
-        for val in anagramMap.values():
-            result.append(val)
-
-        return result    
-
-
-
-
-        
+        return list(anagramMap.values())    
