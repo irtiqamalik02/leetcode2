@@ -1,13 +1,13 @@
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        anagramMap = defaultdict(list)
-        
+        freqCount = {}
+
         for s in strs:
-            count = [0] * 26
-
+            charCount = [0] * 26
             for c in s:
-                count[ord(c) - ord('a')] += 1
+                charCount[ord(c) - ord('a')] += 1
 
-            anagramMap[tuple(count)].append(s)
+            freqCount.setdefault(tuple(charCount),[]).append(s)
 
-        return list(anagramMap.values())        
+        return list(freqCount.values())    
+        
