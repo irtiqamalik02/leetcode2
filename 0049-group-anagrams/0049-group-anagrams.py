@@ -1,13 +1,9 @@
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        freqCount = {}
+        # iterate, sort , insert to hashmap
 
+        hashMap = {}
         for s in strs:
-            charCount = [0] * 26
-            for c in s:
-                charCount[ord(c) - ord('a')] += 1
+            hashMap.setdefault(tuple(sorted(s)),[]).append(s)
 
-            freqCount.setdefault(tuple(charCount),[]).append(s)
-
-        return list(freqCount.values())    
-        
+        return list(hashMap.values())    
