@@ -5,5 +5,6 @@ class Solution:
             complement = target - n
             if complement in prevMap:
                 return [i,prevMap[complement]]
-            prevMap[n] = i  
-            
+            prevMap[n] = i
+                
+        
