@@ -1,14 +1,9 @@
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        hashMap = defaultdict(list)
-
+        hashmap = {}
         for s in strs:
-            count = [0] * 26
+            key = tuple(sorted(s))
+            hashmap.setdefault(key,[]).append(s)
 
-            for c in s:
-                count[ord(c) - ord('a')] += 1
-
-            hashMap[tuple(count)].append(s)
-
-        return list(hashMap.values())        
+        return list(hashmap.values())    
         
