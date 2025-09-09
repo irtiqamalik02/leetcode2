@@ -1,9 +1,13 @@
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        hashmap = {}
-        for s in strs:
-            key = tuple(sorted(s))
-            hashmap.setdefault(key,[]).append(s)
+        result = defaultdict(list)
 
-        return list(hashmap.values())    
+        for s in strs:
+            count = [0] * 26
+            for c in s:
+                count[ord(c) - ord('a')] += 1
+
+            result[tuple(count)].append(s)
+
+        return list(result.values())        
         
