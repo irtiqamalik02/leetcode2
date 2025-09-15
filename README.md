@@ -9,6 +9,7 @@
 | [0049-group-anagrams](https://github.com/irtiqamalik02/leetcode2/tree/master/0049-group-anagrams) |
 | [0217-contains-duplicate](https://github.com/irtiqamalik02/leetcode2/tree/master/0217-contains-duplicate) |
 | [0238-product-of-array-except-self](https://github.com/irtiqamalik02/leetcode2/tree/master/0238-product-of-array-except-self) |
+| [0271-encode-and-decode-strings](https://github.com/irtiqamalik02/leetcode2/tree/master/0271-encode-and-decode-strings) |
 | [0347-top-k-frequent-elements](https://github.com/irtiqamalik02/leetcode2/tree/master/0347-top-k-frequent-elements) |
 ## Hash Table
 |  |
@@ -31,6 +32,7 @@
 | ------- |
 | [0049-group-anagrams](https://github.com/irtiqamalik02/leetcode2/tree/master/0049-group-anagrams) |
 | [0242-valid-anagram](https://github.com/irtiqamalik02/leetcode2/tree/master/0242-valid-anagram) |
+| [0271-encode-and-decode-strings](https://github.com/irtiqamalik02/leetcode2/tree/master/0271-encode-and-decode-strings) |
 ## Divide and Conquer
 |  |
 | ------- |
@@ -59,4 +61,8 @@
 |  |
 | ------- |
 | [0036-valid-sudoku](https://github.com/irtiqamalik02/leetcode2/tree/master/0036-valid-sudoku) |
+## Design
+|  |
+| ------- |
+| [0271-encode-and-decode-strings](https://github.com/irtiqamalik02/leetcode2/tree/master/0271-encode-and-decode-strings) |
 <!---LeetCode Topics End-->
