@@ -3,12 +3,8 @@ class Codec:
         """Encodes a list of strings to a single string.
         """
         # use len(str)# as delimiter
-        res = ""
-        for s in strs:
-           
-            res += (str(len(s)) +'#'+ s)
 
-        return res    
+        return "".join(f"{len(s)}#{s}" for s in strs)    
 
     def decode(self, s: str) -> List[str]:
         """Decodes a single string to a list of strings.
