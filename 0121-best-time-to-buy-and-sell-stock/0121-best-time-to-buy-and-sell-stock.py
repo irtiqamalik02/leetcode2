@@ -1,6 +1,6 @@
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        l, r = 0, 1 # l: buy, r:sell
+        l,r = 0, 1
         maxProfit = 0
 
         while r < len(prices):
@@ -8,10 +8,9 @@ class Solution:
                 profit = prices[r] - prices[l]
                 maxProfit = max(maxProfit, profit)
             else:
-                l = r # shift to the min position
-            r += 1 # move r regardless
+                l = r
 
-        return maxProfit    
+            r += 1
 
-
+        return maxProfit            
         
