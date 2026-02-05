@@ -4,6 +4,7 @@ class Solution:
         for n in nums:
             if n in uniques:
                 return True
-            uniques.add(n)  
-        return False      
+            uniques.add(n)
+
+        return False        
         
