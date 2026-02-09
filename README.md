@@ -116,4 +116,8 @@
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/irtiqamalik02/leetcode2/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0424-longest-repeating-character-replacement](https://github.com/irtiqamalik02/leetcode2/tree/master/0424-longest-repeating-character-replacement) |
+## Union-Find
+|  |
+| ------- |
+| [0128-longest-consecutive-sequence](https://github.com/irtiqamalik02/leetcode2/tree/master/0128-longest-consecutive-sequence) |
 <!---LeetCode Topics End-->
