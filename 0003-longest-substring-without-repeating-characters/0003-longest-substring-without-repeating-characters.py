@@ -11,7 +11,8 @@ class Solution:
                 charSet.remove(s[l])
                 l += 1
             charSet.add(s[r])
-            maxL = max(maxL,r-l+1)    
+            maxL = max(maxL,r-l+1) 
+               
         return maxL
 
 
