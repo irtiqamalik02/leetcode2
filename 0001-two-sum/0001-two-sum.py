@@ -4,7 +4,10 @@ class Solution:
         for i,n in enumerate(nums):
             complement = target - n
             if complement in hashMap:
-                return [hashMap[complement],i]
+                return [i,hashMap[complement]]
+
             hashMap[n] = i
-                
+
+
+
         
