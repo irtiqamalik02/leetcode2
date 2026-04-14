@@ -4,7 +4,7 @@ class Solution:
         freqMap = Counter(nums)
 
         # initailise list of buckets
-        buckets = [[] for _ in range(len(nums)+1)]
+        buckets = [[] for i in range(len(nums)+1)]
 
         # add to bucket based on freq
         for num,freq in freqMap.items():
