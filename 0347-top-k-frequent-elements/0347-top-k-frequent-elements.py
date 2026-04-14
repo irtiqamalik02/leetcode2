@@ -1,23 +1,20 @@
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
-        bucket = [[] for _ in range(len(nums)+1)]
-
+        # counter freq
         freqMap = Counter(nums)
-        # add to bucket based on freq
-        for n,f in freqMap.items():
-            bucket[f].append(n)
 
+        # initailise list of buckets
+        buckets = [[] for _ in range(len(nums)+1)]
+
+        # add to bucket based on freq
+        for num,freq in freqMap.items():
+            buckets[freq].append(num)
+
+        # traverse in reverse
         res = []
-        # traverse in reverse and fetch k elements
-        for i in range(len(bucket)-1,0,-1):
-            for n in bucket[i]:
+        for i in range(len(buckets)-1, 0, -1):
+            for n in buckets[i]:
                 res.append(n)
                 if len(res) == k:
                     return res
-
-
-
-                
-
-
         
