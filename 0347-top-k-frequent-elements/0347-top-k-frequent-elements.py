@@ -1,20 +1,11 @@
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
-        # counter freq
         freqMap = Counter(nums)
-
-        # initailise list of buckets
-        buckets = [[] for i in range(len(nums)+1)]
-
-        # add to bucket based on freq
+        minHeap = []
         for num,freq in freqMap.items():
-            buckets[freq].append(num)
+            heapq.heappush(minHeap,(freq,num))
+            if len(minHeap) > k:
+                heapq.heappop(minHeap)
 
-        # traverse in reverse
-        res = []
-        for i in range(len(buckets)-1, 0, -1):
-            for n in buckets[i]:
-                res.append(n)
-                if len(res) == k:
-                    return res
+        return [num for freq,num in minHeap]        
         
