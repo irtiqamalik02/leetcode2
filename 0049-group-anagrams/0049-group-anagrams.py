@@ -4,6 +4,8 @@ class Solution:
         for s in strs:
             key = tuple(sorted(s))
             res[key].append(s)
-        return list(res.values())    
+
+        return list(res.values())   
+
 
         
