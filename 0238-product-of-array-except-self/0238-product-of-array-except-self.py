@@ -2,7 +2,6 @@ class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
         length = len(nums)
         res = [1] * length
-        res2 = [1] * length
         prefix, postfix = 1, 1
 
         for i,n in enumerate(nums):
@@ -10,8 +9,8 @@ class Solution:
             prefix *= nums[i]
 
         for i in range(length-1,-1,-1):
-            res2[i] = postfix
+            res[i] *= postfix
             postfix *= nums[i]
 
-        return [n1 * n2 for n1,n2 in zip(res,res2)]        
+        return res      
         
